@@ -1,0 +1,37 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+	<h1>Bem vindo(a), {{ request.user.username.capitalize }} <a style="font-size:20px;float: right;" href="{% url 'logout' %}">Sair</a></h1><br>
+	<br>
+	<!--
+	<input type="email" value="" id="receiver" name="receiver" placeholder="Remetente">
+	<button type="submit" id="add_receiver" onclick="add_receiver()">Adicionar</button>
+	<br><br>
+	-->
+
+	<p>{{ message }}</p>
+	<strong>Remetentes: (<a href="{% url 'receivers' %}">Mudar lista de remetentes</a>)
+	</strong><br>
+
+	{% if not receivers %}
+		<p style="color: red;"> Sem remetentes! <a href="{% url 'receivers' %}">Clique aqui para adicionar!</a>
+	{% else %}
+		<p>{{ receivers }}</p>
+	{% endif %}
+
+	<div id="receivers"></div>
+	<br>
+
+	<form method="POST" action="{% url 'send-email' %}">
+		{% csrf_token %}
+		<input type="text" id="subject" name="subject" placeholder="Assunto" required>
+		<br>
+
+		<textarea type="text" name="content" placeholder="Conteúdo" required></textarea>
+
+		<br><br>
+
+		<input type="submit" value="Enviar" id="submit" name="submit">
+	</form>
+
+{% endblock content %}

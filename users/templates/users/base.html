@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email Sender</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'app/main.css' %}">
+	<script type="text/javascript" src="{% static 'app/main.js' %}"></script>
+</head>
+<body>
+	<div id="content-user">
+
+	{% block content %}
+
+	{% endblock content %}
+	
+	</div>
+</body>
+</html>

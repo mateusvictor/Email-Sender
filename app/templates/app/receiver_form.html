@@ -1,0 +1,20 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+	<a href="{% url 'home' %}" style="text-decoration: none;">&#8592; Voltar</a>
+	<br><br>
+	<h3>Faça alterações na sua lista de remetentes</h3>
+	<br>
+	<br>
+	<form method="POST" action="{% url 'add-receiver' %}">
+		{% csrf_token %}
+		<input type="email" id="receiver" name="receiver" placeholder="Remetente">
+		<input type="submit" id="add_receiver" value="Adicionar">
+		<br><br>
+	</form>
+	{% for receiver in receiver_list %}
+		<div style="margin-bottom: 10px;">
+			<a class="delete-link" href="{% url 'remove-receiver' receiver.id %}"><i class="fa fa-remove" style="font-size:20px;color:red"></i></a> {{ receiver }}
+		</div>
+	{% endfor %}
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+	<h1>Entrar</h1>
+	<br><br>
+
+	<form method="POST">
+		{% csrf_token %}
+		{{ form.username }}
+		<br>
+
+		{{ form.password }}
+		<br>
+		<input type="submit" value="Login">
+		<br>
+		<p style="text-align: center; font-size: 15px;">
+			Não possui uma conta? <a href="{% url 'register' %}">Registre-se</a>
+		</p>
+	</form>
+
+{% endblock content %}

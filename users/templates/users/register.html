@@ -1,0 +1,26 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+	<h1>Registrar</h1>
+	<br>
+
+	<form method="POST">
+		{% csrf_token %}
+		{{ form.username }}
+		<br>
+
+		{{ form.password1 }}
+		<br>
+
+		{{ form.password2 }}
+
+		<br>
+
+		<input type="submit" value="Registrar">
+		<br>
+		<p style="text-align: center; font-size: 15px;">
+			Já possui uma conta? <a href="{% url 'login' %}">Login</a>
+		</p>
+	</form>
+
+{% endblock content %}

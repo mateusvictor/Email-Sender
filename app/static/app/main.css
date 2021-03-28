@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+button,
+label,
+input,
+textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+body {
+	background-color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	background: rgb(54, 217, 182);
+	background: linear-gradient(90deg, #a8c0ff, #3f2b96);
+	background: linear-gradient(90deg, #43cea2, #185a9d);
+
+	background: linear-gradient(90deg, #004e92, #000428);
+	font-size: 17px;
+
+}
+h1 {
+	margin-top: 2px;
+}
+
+
+input, textarea, button {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+
+	width: 100%;
+	display: block;
+	padding-left: 4px;
+	height: 33px;	
+    border: 1px solid #004e92;
+    border-radius: 5px;
+
+}
+
+
+#content, #content-user {
+	background-color: white;
+	max-width: 700px;
+	margin: 80px auto;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	padding: 30px;
+	border-radius: 7px;
+}
+
+#content-user {
+	max-width: 500px;
+}
+
+input[type=submit] {
+    background-color: #FAFAFA;
+    
+	color: #004e92;	
+}
+
+textarea{
+	height: 250px;
+	padding: 3px;
+}
+
+#add_receiver {
+	width: 20%;
+	display: inline;
+	float: right;
+}
+
+#receiver, #list {
+	width: 78%;
+	display: inline;
+}
+
+.delete-link {
+    font-weight: 900;
+    color: #cf4949;
+    font-size: 30px;
+    line-height: 0;
+}	
+
+.check-link {
+    font-weight: 900;
+    color: green;
+    font-size: 30px;
+    line-height: 0;
+}	
+
