@@ -16,7 +16,7 @@ Acesse localhost:8000 ou 127.0.0.1:8000 no seu navegador e desfrute do projeto.
 <img src="https://github.com/mateusvictor/Email-Sender/blob/main/screenshots/email_form.png"></img>
 
 ### Editar remetentes
-<img src="https://github.com/mateusvictor/Email-Sender/blob/main/screenshots/email_form.png"></img>
+<img src="https://github.com/mateusvictor/Email-Sender/blob/main/screenshots/receiver_form.png"></img>
 
 ### Tela de cadastro
 <img src="https://github.com/mateusvictor/Email-Sender/blob/main/screenshots/register.png"></img>
